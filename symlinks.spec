@@ -1,6 +1,6 @@
 Name:    symlinks
 Version: 1.4
-Release: 23
+Release: 24
 Summary: Scan or change symbolic links
 License: Copyright only
 URL:     http://ibiblio.org/pub/Linux/utils/file/
@@ -11,6 +11,7 @@ BuildRequires: gcc
 
 Patch1: symlinks-coverity-readlink.patch
 Patch2: symlinks-coverity-overrun-dynamic.patch
+Patch3: symlinks-fix-cc.patch
 
 %description
 Scans directories for symbolic links, and identifies dangling,
@@ -48,6 +49,9 @@ install -m 644 symlinks.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 
 %changelog
+* Wed Apr 19 2023 Xiaoya Huang <huangxiaoya@iscas.ac.cn> - 1.4-24
+- Fix CC compiler support
+
 * Sat Sep 21 2019 openEuler Buildteam <buildteam@openeuler.org> - 1.4-23
 - Modify spec error information
 

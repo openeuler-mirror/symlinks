@@ -1,0 +1,10 @@
+--- a/Makefile	2009-10-09 21:58:25.000000000 +0800
++++ b/Makefile	2023-04-19 16:55:42.880393433 +0800
+@@ -1,6 +1,6 @@
+ # Makefile for symlinks
+ 
+-CC = gcc
++CC ?= gcc
+  
+ all: symlinks
+ 
